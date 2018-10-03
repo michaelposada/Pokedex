@@ -34,36 +34,38 @@ public class PokemonFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ID =  (UUID) getActivity().getIntent().getSerializableExtra(PokedexActivity.EXTRA_POKEMON_ID);
-        System.out.println(ID);
+
         mPokemon = mPokemonLab.get(getActivity()).getPokemon(ID);
-        System.out.println(mPokemon);
+
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
          View v = inflater.inflate(R.layout.fragment_pokemon, container, false);
-         System.out.println(mPokemon);
+
          mName = v.findViewById(R.id.pokemon_name);
+         mName.setText("Name: " + mPokemon.getMpokemonName());
          //I can set text after intents work
          mID = v.findViewById(R.id.pokemon_id);
-
+         mID.setText("#" + mPokemon.getMpokemonID());
          mHeight = v.findViewById(R.id.pokemon_height);
-
+         mHeight.setText("Height: " + mPokemon.getMheight());
          mWeight = v.findViewById(R.id.pokemon_weight);
-
+         mWeight.setText("Weight: " + mPokemon.getMweight());
          mCatergory = v.findViewById(R.id.pokemon_catergory);
-
+         mCatergory.setText("Catergory: " + mPokemon.getmCatergory());
          mHp = v.findViewById(R.id.pokemon_hp);
-
+         mHp.setText("HP: " + mPokemon.getmHp());
          mAttack = v.findViewById(R.id.pokemon_attack);
-
+         mAttack.setText("Attack: " + mPokemon.getmAttack());
          mDefense = v.findViewById(R.id.pokemon_defense);
-
+         mDefense.setText("Defense: " + mPokemon.getmDefense());
          mSpa = v.findViewById(R.id.pokemon_spa);
-
+         mSpa.setText("Special Attack: " + mPokemon.getmSpa());
          mSpd = v.findViewById(R.id.pokemon_spd);
+         mSpd.setText("Speical Defense: " + mPokemon.getmSpd());
          mSpeed = v.findViewById(R.id.pokemon_speed);
-
+         mSpeed.setText("Speed: " + mPokemon.getmSpeed());
         return v;
     }
 

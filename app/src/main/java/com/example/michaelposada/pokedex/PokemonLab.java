@@ -49,7 +49,7 @@ public class PokemonLab {
     {
         for(Pokemon pokemon : mPokemons)
         {
-            if(pokemon.getUniqueID() == id)
+            if(pokemon.getUniqueID().equals(id))
             {
                 return pokemon;
             }

@@ -3,11 +3,13 @@ package com.example.michaelposada.pokedex;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.ListViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -41,6 +43,7 @@ public class PokemonFragmentList extends Fragment {
     {
         private TextView mNameTextView;
         private TextView mIDTextView;
+        private ImageView mImageView;
         private Pokemon mPokemon;
 
 
@@ -52,6 +55,7 @@ public class PokemonFragmentList extends Fragment {
             itemView.setOnClickListener(this);
             mNameTextView = (TextView) itemView.findViewById(R.id.pokemon_title);
             mIDTextView = (TextView)  itemView.findViewById(R.id.pokemon_id);
+            mImageView = itemView.findViewById(R.id.pokemon_image);
 
         }
 
@@ -66,6 +70,7 @@ public class PokemonFragmentList extends Fragment {
             mPokemon = pokemon;
             mNameTextView.setText(mPokemon.getMpokemonName());
             mIDTextView.setText(mPokemon.getMpokemonID());
+
         }
 
     }
