@@ -1,6 +1,7 @@
 package com.example.michaelposada.pokedex;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.ListViewCompat;
@@ -41,6 +42,14 @@ public class PokemonFragmentList extends Fragment {
 
     private class PokemonHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
+
+        private Integer[] imgid =
+                {
+                        R.drawable.b01,R.drawable.i02,R.drawable.v003,
+                        R.drawable.c004,R.drawable.c005,R.drawable.c006,
+                        R.drawable.s007,R.drawable.w008,R.drawable.b009,
+                        R.drawable.c010
+                };
         private TextView mNameTextView;
         private TextView mIDTextView;
         private ImageView mImageView;
@@ -55,14 +64,14 @@ public class PokemonFragmentList extends Fragment {
             itemView.setOnClickListener(this);
             mNameTextView = (TextView) itemView.findViewById(R.id.pokemon_title);
             mIDTextView = (TextView)  itemView.findViewById(R.id.pokemon_id);
-            mImageView = itemView.findViewById(R.id.pokemon_image);
-
+            mImageView = itemView.findViewById(R.id.pokemon_pics1);
+            mImageView.setX(100);
+            mImageView.setY(100);
         }
 
         public void onClick(View view)
         {
            Intent intent =  PokedexActivity.newIntent(getActivity(), mPokemon.getUniqueID());
-           System.out.println(mPokemon.getUniqueID());
            startActivity(intent);
         }
         public void bind(Pokemon pokemon)
@@ -70,7 +79,9 @@ public class PokemonFragmentList extends Fragment {
             mPokemon = pokemon;
             mNameTextView.setText(mPokemon.getMpokemonName());
             mIDTextView.setText(mPokemon.getMpokemonID());
-
+            Integer i = Integer.valueOf(mPokemon.getMpokemonID()) -1;
+            Drawable image = getResources().getDrawable(imgid[i]);
+            mImageView.setImageDrawable(image);
         }
 
     }

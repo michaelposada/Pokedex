@@ -13,16 +13,16 @@
     <string name="speed">SPEED:</string>
 
     <array name="pokemon_pics">
-        <item>@drawable/B01</item>
-        <item>@drawable/I02</item>
-        <item>@drawable/V003</item>
-        <item>@drawable/C004</item>
-        <item>@drawable/C005</item>
-        <item>@drawable/C006</item>
-        <item>@drawable/S007</item>
-        <item>@drawable/W008</item>
-        <item>@drawable/B009</item>
-        <item>@drawable/C010</item>
+        <item>@drawable/b01</item>
+        <item>@drawable/i02</item>
+        <item>@drawable/v003</item>
+        <item>@drawable/c004</item>
+        <item>@drawable/c005</item>
+        <item>@drawable/c006</item>
+        <item>@drawable/s007</item>
+        <item>@drawable/w008</item>
+        <item>@drawable/b009</item>
+        <item>@drawable/c010</item>
 
     </array>
 

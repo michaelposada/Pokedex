@@ -19,6 +19,8 @@ public class Pokemon {
         this.uniqueID = uniqueID;
     }
 
+
+
     private String mpokemonName;
     private String mpokemonID;
     private String mheight;

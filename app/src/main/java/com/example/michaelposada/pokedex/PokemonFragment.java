@@ -11,7 +11,6 @@ import java.util.UUID;
 
 public class PokemonFragment extends Fragment {
 
-    private static final String ARG_Pokemon_ID = "pokemon_id";
 
     private Pokemon mPokemon;
     private PokemonLab mPokemonLab;
