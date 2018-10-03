@@ -19,6 +19,7 @@ public class PokedexActivity extends SinglePokemonFragment {
 
         Intent intent = new Intent(packageContext, PokedexActivity.class);
         intent.putExtra(EXTRA_POKEMON_ID, ID);
+        System.out.println(ID);
         return intent;
     }
 

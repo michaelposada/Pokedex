@@ -20,20 +20,20 @@ public class Pokemon {
     }
 
     private String mpokemonName;
-    private int mpokemonID;
+    private String mpokemonID;
     private String mheight;
     private String mweight;
     private String mCatergory;
-    private int mHp;
-    private int mAttack;
-    private int mDefense;
-    private int mSpa;
-    private int mSpd;
-    private int mSpeed;
+    private String mHp;
+    private String mAttack;
+    private String mDefense;
+    private String mSpa;
+    private String mSpd;
+    private String mSpeed;
 
 
-    public Pokemon(String pokemonName, int pokemonID, String height, String weight, String Catergory, int hp, int attack, int defense,
-                   int spa, int spd, int speed)
+    public Pokemon(String pokemonName, String pokemonID, String height, String weight, String Catergory, String hp, String attack, String defense,
+                   String spa, String spd, String speed)
     {
 
         uniqueID = UUID.randomUUID();
@@ -54,7 +54,7 @@ public class Pokemon {
         return mpokemonName;
     }
 
-    public int getMpokemonID()
+    public String getMpokemonID()
     {
         return mpokemonID;
     }
@@ -71,27 +71,27 @@ public class Pokemon {
         return mCatergory;
     }
 
-    public int getmHp() {
+    public String getmHp() {
         return mHp;
     }
 
-    public int getmAttack() {
+    public String getmAttack() {
         return mAttack;
     }
 
-    public int getmDefense() {
+    public String getmDefense() {
         return mDefense;
     }
 
-    public int getmSpa() {
+    public String getmSpa() {
         return mSpa;
     }
 
-    public int getmSpd() {
+    public String getmSpd() {
         return mSpd;
     }
 
-    public int getmSpeed() {
+    public String getmSpeed() {
         return mSpeed;
     }
 
@@ -99,7 +99,7 @@ public class Pokemon {
         this.mpokemonName = mpokemonName;
     }
 
-    public void setMpokemonID(int mpokemonID) {
+    public void setMpokemonID(String mpokemonID) {
         this.mpokemonID = mpokemonID;
     }
 
@@ -115,27 +115,27 @@ public class Pokemon {
         this.mCatergory = mCatergory;
     }
 
-    public void setmHp(int mHp) {
+    public void setmHp(String mHp) {
         this.mHp = mHp;
     }
 
-    public void setmAttack(int mAttack) {
+    public void setmAttack(String mAttack) {
         this.mAttack = mAttack;
     }
 
-    public void setmDefense(int mDefense) {
+    public void setmDefense(String mDefense) {
         this.mDefense = mDefense;
     }
 
-    public void setmSpa(int mSpa) {
+    public void setmSpa(String mSpa) {
         this.mSpa = mSpa;
     }
 
-    public void setmSpd(int mSpd) {
+    public void setmSpd(String mSpd) {
         this.mSpd = mSpd;
     }
 
-    public void setmSpeed(int mSpeed) {
+    public void setmSpeed(String mSpeed) {
         this.mSpeed = mSpeed;
     }
 }

@@ -34,17 +34,17 @@ public class PokemonFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ID =  (UUID) getActivity().getIntent().getSerializableExtra(PokedexActivity.EXTRA_POKEMON_ID);
+        System.out.println(ID);
         mPokemon = mPokemonLab.get(getActivity()).getPokemon(ID);
+        System.out.println(mPokemon);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
          View v = inflater.inflate(R.layout.fragment_pokemon, container, false);
-
-         mName = v.findViewById(R.id.pokemon_title);
+         System.out.println(mPokemon);
+         mName = v.findViewById(R.id.pokemon_name);
          //I can set text after intents work
-         mName.setText(mPokemon.getMpokemonName());
-
          mID = v.findViewById(R.id.pokemon_id);
 
          mHeight = v.findViewById(R.id.pokemon_height);

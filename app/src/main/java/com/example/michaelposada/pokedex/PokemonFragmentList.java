@@ -15,15 +15,15 @@ import java.util.List;
 
 public class PokemonFragmentList extends Fragment {
 
-    private RecyclerView mCrimeRecyclerView;
+    private RecyclerView mPokemonRecyclerView;
     private PokemonAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =
-                inflater.inflate(R.layout.pokemon_list, container, false);
-        mCrimeRecyclerView = (RecyclerView) view.findViewById(R.id.pokemon_recycler_view);
-        mCrimeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                inflater.inflate(R.layout.fragment_pokemon_list, container, false);
+        mPokemonRecyclerView = (RecyclerView) view.findViewById(R.id.pokemon_recycler_view);
+        mPokemonRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
         return view;
     }
@@ -33,7 +33,7 @@ public class PokemonFragmentList extends Fragment {
         PokemonLab pokemonLab = PokemonLab.get(getActivity());
         List<Pokemon> pokemons = pokemonLab.getPokemons();
         mAdapter = new PokemonAdapter(pokemons);
-        mCrimeRecyclerView.setAdapter(mAdapter);
+        mPokemonRecyclerView.setAdapter(mAdapter);
     }
 
 
@@ -58,6 +58,7 @@ public class PokemonFragmentList extends Fragment {
         public void onClick(View view)
         {
            Intent intent =  PokedexActivity.newIntent(getActivity(), mPokemon.getUniqueID());
+           System.out.println(mPokemon.getUniqueID());
            startActivity(intent);
         }
         public void bind(Pokemon pokemon)
