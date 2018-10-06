@@ -85,6 +85,10 @@
         android:layout_height="wrap_content"
         android:text="@string/speed"/>
 
+    <ImageView
+        android:id="@+id/pokemon_pics1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </android.support.v7.widget.LinearLayoutCompat>

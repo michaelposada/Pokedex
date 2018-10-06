@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp">
 
-    <TextView
-        android:id="@+id/pokemon_title"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="110dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/pokemon_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="#" />
+        <ImageView
+            android:id="@+id/pokemon_pics1"
+            android:layout_width="84dp"
+            android:layout_height="83dp"
+            android:background="@drawable/pokeball"
+            android:scaleType="centerInside"
+            android:textAlignment="textEnd" />
 
-    <ImageView
-        android:id="@+id/pokemon_pics1"
-        android:textAlignment="textEnd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="desc"
-        android:padding="100dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-         />
+            <TextView
+                android:id="@+id/pokemon_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/pokemon_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 
 

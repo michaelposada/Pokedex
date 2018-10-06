@@ -44,12 +44,12 @@ public class PokemonFragmentList extends Fragment {
     {
 
         private Integer[] imgid =
-                {
-                        R.drawable.b01,R.drawable.i02,R.drawable.v003,
-                        R.drawable.c004,R.drawable.c005,R.drawable.c006,
-                        R.drawable.s007,R.drawable.w008,R.drawable.b009,
-                        R.drawable.c010
-                };
+            {
+                    R.drawable.b01,R.drawable.i02,R.drawable.v003,
+                    R.drawable.c004,R.drawable.c005,R.drawable.c006,
+                    R.drawable.s007,R.drawable.w008,R.drawable.b009,
+                    R.drawable.c010
+            };
         private TextView mNameTextView;
         private TextView mIDTextView;
         private ImageView mImageView;
@@ -65,8 +65,8 @@ public class PokemonFragmentList extends Fragment {
             mNameTextView = (TextView) itemView.findViewById(R.id.pokemon_title);
             mIDTextView = (TextView)  itemView.findViewById(R.id.pokemon_id);
             mImageView = itemView.findViewById(R.id.pokemon_pics1);
-            mImageView.setX(100);
-            mImageView.setY(100);
+            mImageView.setX(10);
+            mImageView.setY(50);
         }
 
         public void onClick(View view)

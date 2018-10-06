@@ -1,10 +1,12 @@
 package com.example.michaelposada.pokedex;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.UUID;
@@ -28,6 +30,14 @@ public class PokemonFragment extends Fragment {
     private TextView mSpd;
     private TextView mSpeed;
 
+    private ImageView mImage;
+
+    private Integer[] imageName = {
+            R.drawable.bulbasaur,R.drawable.ivysaur,R.drawable.venusaur,
+            R.drawable.charmander,R.drawable.charmeleon,R.drawable.charizard,
+            R.drawable.squirtle,R.drawable.wartortle,R.drawable.blastoise,
+            R.drawable.caterpie };
+
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +52,10 @@ public class PokemonFragment extends Fragment {
     {
          View v = inflater.inflate(R.layout.fragment_pokemon, container, false);
 
+         mImage = v.findViewById(R.id.pokemon_pics1);
+         Integer i = Integer.valueOf(mPokemon.getMpokemonID()) -1;
+         Drawable draw = getResources().getDrawable(imageName[i]);
+         mImage.setImageDrawable(draw);
          mName = v.findViewById(R.id.pokemon_name);
          mName.setText("Name: " + mPokemon.getMpokemonName());
          //I can set text after intents work
